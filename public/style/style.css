@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+}
+.container .header {
+  width: 100%;
+  height: 8rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1rem solid yellow;
+  background-color: aliceblue;
+}
+.container .main {
+  width: 100%;
+  height: calc(100% - 8rem);
+  display: flex;
+  justify-content: center;
+  padding-top: 7rem;
+}
+.container .main .form {
+  width: 25%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+.container .main .form h1 {
+  font-size: 3rem;
+}
+.container .main .form label {
+  margin-top: 3rem;
+}
+.container .main .form input {
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  margin-top: 0.7rem;
+}
+.container .main .form button {
+  height: 3.5rem;
+  width: 10rem;
+  border-radius: 0.6rem;
+  background-color: aqua;
+}/*# sourceMappingURL=style.css.map */
