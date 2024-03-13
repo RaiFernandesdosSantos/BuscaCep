@@ -40,6 +40,7 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
+        //fazer o voltar
         <button className={button.button}>Nova Pesquisa</button>
       </main>
     </div>
