@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Rubik } from "next/font/google";
+import '../public/style/global.css'
+//font opmization
+const rubik = Rubik({ subsets: ["latin"], 
+weight: ['500', '700']});
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -1,0 +1,16 @@
+.button {
+  height: 6rem;
+  width: 12rem;
+  border-radius: 1rem;
+  background-color: #007f00;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  align-self: Center;
+  margin-top: 2rem;
+}
+
+.voltar {
+  width: 4.5rem;
+  height: 4.5rem;
+}
