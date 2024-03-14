@@ -1,20 +1,11 @@
-import Image from "next/image";
-import "../public/style/style.css";
-import header from "../public/style/header.module.css";
 import button from "../public/style/button.module.css";
-import logo from "../public/img/logo.png";
+import Header from "../public/components/header";
+import "../public/style/style.css";
 
 export default function Home() {
   return (
     <div className="container">
-      <header className={header.header}>
-        <Image
-          src={logo}
-          height={100}
-          width={300}
-          alt="Logo da API utilizada"
-        />
-      </header>
+      <Header />
 
       <main className="main">
         <form action="" className="form">

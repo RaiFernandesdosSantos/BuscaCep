@@ -1,21 +1,12 @@
-import Image from "next/image";
 import "../../public/style/style.css";
-import header from "../../public/style/header.module.css";
 import button from "../../public/style/button.module.css";
-import logo from "../../public/img/logo.png";
 import table from "../../public/style/table.module.css";
+import Header from "../../public/components/header";
 
 export default function Home() {
   return (
     <div className="container">
-      <header className={header.header}>
-        <Image
-          src={logo}
-          height={100}
-          width={300}
-          alt="Logo da API utilizada"
-        />
-      </header>
+      <Header />
 
       <main className="main">
         <div className="wrap">
@@ -40,7 +31,6 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
-        //fazer o voltar
         <button className={button.button}>Nova Pesquisa</button>
       </main>
     </div>
