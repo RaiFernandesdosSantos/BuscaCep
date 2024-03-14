@@ -1,16 +1,32 @@
-.button {
-  height: 6rem;
-  width: 12rem;
+.pesquisar {
+  width: 18rem;
+  height: 8rem;
   border-radius: 1rem;
   background-color: #007f00;
-  color: white;
-  font-size: 2rem;
+  color: #ffffff;
+  font-size: 3rem;
   font-weight: 700;
   align-self: Center;
+  align-items: center;
+  display: flex;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 .voltar {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: #007f00;
+}
+
+.iconevoltar {
+  width: 4rem;
+  height: 4rem;
+  color: #ffffff;
+}
+
+.iconepesquisar {
+  margin-left: 1rem;
+  width: 4rem;
+  height: 4rem;
 }
