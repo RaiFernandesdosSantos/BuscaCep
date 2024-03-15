@@ -1,8 +1,11 @@
 "use client";
 
 import button from "../public/style/button.module.css";
+import Button from "../public/components/button";
 import Header from "../public/components/header";
 import "../public/style/style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -11,16 +14,27 @@ export default function Home() {
       <main className="main">
         <form action="" className="form">
           <h1>Buscar CEP</h1>
-          <label htmlFor="rc">Digite um endereço ou logradouro: </label>
+          <div className="wrap">
+            <label htmlFor="rc">Pesquisar utilizando:</label>
+            <select name="tipo" id="">
+              <option value="cep" selected>
+                CEP
+              </option>
+              <option value="endereco">Endereço</option>
+            </select>
+          </div>
           <input
             type="text"
             name="rc"
             id="rc"
-            placeholder="Não utilize nº da casa/apt/lote/prédio ou abreviações"
+            placeholder="No formato: 00000-000"
           />
-          <button type="submit" className={button.button}>
-            Buscar
-          </button>
+          <Button texto="Buscar" classe={button.pesquisar}>
+            <FontAwesomeIcon
+              icon={faMagnifyingGlassLocation}
+              className={button.iconepesquisar}
+            />
+          </Button>
         </form>
       </main>
     </div>
