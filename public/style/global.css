@@ -28,6 +28,6 @@ body {
 h1 {
   font-size: 5rem;
   color: #007f00;
-  text-shadow: 0.1rem 0.1rem 0.03rem #36392d;
-  border-bottom: solid 0.01rem #4c8eb1;
+  margin: 1rem;
+  text-align: center;
 }
