@@ -1,3 +1,5 @@
+"use client";
+
 import button from "../public/style/button.module.css";
 import Button from "../public/components/button";
 import Header from "../public/components/header";
@@ -9,7 +11,6 @@ export default function Home() {
   return (
     <div className="container">
       <Header />
-
       <main className="main">
         <form action="" className="form">
           <h1>Buscar CEP</h1>
@@ -28,7 +29,6 @@ export default function Home() {
             id="rc"
             placeholder="No formato: 00000-000"
           />
-
           <Button texto="Buscar" classe={button.pesquisar}>
             <FontAwesomeIcon
               icon={faMagnifyingGlassLocation}
