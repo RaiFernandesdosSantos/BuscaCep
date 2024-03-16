@@ -9,10 +9,13 @@
   border-radius: 1rem;
   background-color: #f0f8ff;
 }
-.form label {
+
+.form label,
+.form select {
   font-size: 2.5rem;
   font-weight: 600;
 }
+
 .form input {
   height: 5rem;
   padding: 1rem;
@@ -22,15 +25,12 @@
 }
 
 .form select {
-  font-size: 2.5rem;
-  font-weight: 600;
   width: 15rem;
-  height: 6rem;
   text-align: center;
   color: #ffffff;
-  background-color: #00a300;
   border-radius: 1rem;
 }
+
 .wrap {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -39,4 +39,42 @@
   align-items: center;
   gap: 5rem;
   padding: 0 2rem;
-} /*# sourceMappingURL=style.css.map */
+}
+
+.pesquisa,
+.voltar,
+.form select {
+  height: 6rem;
+  background-color: #00a300;
+}
+
+.pesquisar {
+  width: 15rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  align-self: Center;
+  align-items: center;
+  display: flex;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.voltar {
+  width: 6rem;
+}
+
+.iconepesquisar,
+.iconevoltar {
+  width: 4rem;
+  height: 4rem;
+}
+
+.iconevoltar {
+  color: #ffffff;
+}
+
+.iconepesquisar {
+  margin-left: 1rem;
+}

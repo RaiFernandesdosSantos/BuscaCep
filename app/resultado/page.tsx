@@ -1,11 +1,12 @@
 import "../../public/style/style.css";
-import button from "../../public/style/button.module.css";
 import Button from "../../public/components/button";
 import table from "../../public/style/table.module.css";
 import Header from "../../public/components/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotateLeft } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
+import {
+  faRotateLeft,
+  faMagnifyingGlassLocation,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -14,11 +15,8 @@ export default function Home() {
 
       <main className="main">
         <div className="wrap">
-          <Button texto="" classe={button.voltar}>
-            <FontAwesomeIcon
-              icon={faRotateLeft}
-              className={button.iconevoltar}
-            />
+          <Button texto="" classe="voltar">
+            <FontAwesomeIcon icon={faRotateLeft} className="iconevoltar" />
           </Button>
           <h1>Resultado da pesquisa</h1>
         </div>
@@ -40,10 +38,10 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
-        <Button texto="Nova Pesquisa" classe={button.pesquisar}>
+        <Button texto="Nova Pesquisa" classe="pesquisar">
           <FontAwesomeIcon
             icon={faMagnifyingGlassLocation}
-            className={button.iconevoltar}
+            className="iconevoltar"
           />
         </Button>
       </main>
