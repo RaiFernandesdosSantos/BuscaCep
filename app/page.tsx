@@ -1,8 +1,5 @@
-"use client";
-
-import Button from "../public/components/button";
-import Header from "../public/components/header";
-import "../public/style/style.css";
+import Header from "@/public/components/header";
+import "@/public/style/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 import { buscar } from "./middleware/action";
@@ -12,20 +9,22 @@ export default function Home() {
     <div className="container">
       <Header />
       <main className="main">
-        <form className="form" action={buscar}>
+        <form action={buscar}>
           <h1>Buscar CEP</h1>
+          <label htmlFor="rc">Digite o CEP que deseja pesquisar:</label>
           <input
             type="text"
-            name="rc"
             id="rc"
-            placeholder="No formato: 00000-000"
+            name="rc"
+            placeholder="Digite somente os numeros"
           />
-          <Button texto="Buscar" classe="pesquisar">
+          <button type="submit" className="pesquisar">
+            Buscar
             <FontAwesomeIcon
               icon={faMagnifyingGlassLocation}
               className="iconepesquisar"
             />
-          </Button>
+          </button>
         </form>
       </main>
     </div>
