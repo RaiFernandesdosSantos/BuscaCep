@@ -1,6 +1,7 @@
 "use server";
 
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 export async function buscar(fData: FormData) {
   const busca = fData.get("codigocep");
@@ -9,4 +10,6 @@ export async function buscar(fData: FormData) {
   const data = await response.json();
 
   cookies().set("cep", JSON.stringify(data));
+
+  redirect("/resultado");
 }

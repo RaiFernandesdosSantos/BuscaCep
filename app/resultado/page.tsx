@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import "@/public/style/style.css";
 import Header from "@/public/components/header";
@@ -7,8 +6,12 @@ import {
   faRotateLeft,
   faMagnifyingGlassLocation,
 } from "@fortawesome/free-solid-svg-icons";
+import { cookies } from "next/headers";
 
 export default function Home() {
+  const data = cookies().get("cep");
+  const ardata = data?.value ? JSON.parse(data.value) : null;
+
   return (
     <div className="container">
       <Header />
@@ -30,14 +33,14 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            {data?.map((item: any) => (
-              <tr key={item.cep}>
-                <td>{item.logradouro}</td>
-                <td></td>
-                <td></td>
-                <td></td>
+            {ardata && (
+              <tr>
+                <td>{ardata.logradouro}</td>
+                <td>{ardata.bairro}</td>
+                <td>{`${ardata.localidade}/${ardata.uf}`}</td>
+                <td>{ardata.cep}</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
         <Link href={"/"} className="pesquisar">
