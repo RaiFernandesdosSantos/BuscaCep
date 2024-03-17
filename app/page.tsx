@@ -42,12 +42,12 @@ import { buscar } from "./middleware/action";
           <input type="text" id="estado" name="estado"/>
         </div>
       )}
-      <Button texto="Buscar" classe="pesquisar">
+      <button type="submit" className="pesquisar">
               <FontAwesomeIcon
                 icon={faMagnifyingGlassLocation}
                 className="iconepesquisar"
               />
-      </Button>
+      </button>
     </form>
   );
 };
