@@ -6,6 +6,7 @@ import "../public/style/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { buscar } from "./middleware/action";
 
   const Formulario = () => {
     const [opcao, setOpcao] = useState('cep');
@@ -15,7 +16,7 @@ import { useState } from "react";
     }
 
     return (
-    <form>
+      <form className="form" action={buscar}>
       <label htmlFor="pesquisa">Pesquisar utilizando:</label>
       <select id="pesquisa" value={opcao} onChange={mudarOpcao}>
         <option value="cep">CEP</option>
