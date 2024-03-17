@@ -3,8 +3,8 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export async function Buscar(fData: FormData) {
-  const busca = fData.get("rc");
+export async function buscar(fData: FormData) {
+  const busca = fData.get("codigocep");
 
   const response = await fetch(`https://viacep.com.br/ws/${busca}/json/`);
   const data = await response.json();

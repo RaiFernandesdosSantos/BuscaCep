@@ -1,3 +1,4 @@
+"use client"
 import Header from "@/public/components/header";
 import "@/public/style/style.css";
 import Formulario from "@/public/components/formulario";
