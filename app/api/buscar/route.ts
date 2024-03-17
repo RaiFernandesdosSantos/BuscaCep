@@ -1,6 +1,4 @@
 export async function POST(req: Request) {
-  const body = await req.json();
-  console.log(body);
-
-  return new Response(JSON.stringify({ message: "Ola Mundo!" }));
+  console.log(req);
+  return new Response(JSON.stringify({ text: "Nada da certo" }));
 }

@@ -11,17 +11,8 @@ export default function Home() {
     <div className="container">
       <Header />
       <main className="main">
-        <form action="/api/buscar" className="form">
+        <form className="form" action="/api/buscar" method="POST">
           <h1>Buscar CEP</h1>
-          <div className="wrap">
-            <label htmlFor="rc">Pesquisar utilizando:</label>
-            <select name="tipo" id="">
-              <option value="cep" selected>
-                CEP
-              </option>
-              <option value="endereco">Endereço</option>
-            </select>
-          </div>
           <input
             type="text"
             name="rc"
