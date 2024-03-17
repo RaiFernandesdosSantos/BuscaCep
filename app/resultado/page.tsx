@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import "@/public/style/style.css";
 import Header from "@/public/components/header";

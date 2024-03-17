@@ -1,3 +1,4 @@
+"use client"
 import Header from "@/public/components/header";
 import "@/public/style/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,11 +15,13 @@ import { buscar } from "./middleware/action";
 
     return (
       <form className="form" action={buscar}>
+      <div className="selectwrap">
       <label htmlFor="pesquisa">Pesquisar utilizando:</label>
       <select id="pesquisa" value={opcao} onChange={mudarOpcao}>
         <option value="cep">CEP</option>
         <option value="endereco">Endereço</option>
       </select>
+      </div>
       {opcao === 'cep' && (
         <div className="wrap">
           <label htmlFor="codigocep">Digite o CEP:</label>
@@ -43,6 +46,7 @@ import { buscar } from "./middleware/action";
         </div>
       )}
       <button type="submit" className="pesquisar">
+              Buscar
               <FontAwesomeIcon
                 icon={faMagnifyingGlassLocation}
                 className="iconepesquisar"
