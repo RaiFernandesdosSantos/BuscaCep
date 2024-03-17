@@ -11,7 +11,6 @@ import { cookies } from "next/headers";
 export default function Home() {
   const data = cookies().get("cep");
   const ardata = data?.value ? JSON.parse(data.value) : null;
-  console.log(ardata);
 
   return (
     <div className="container">
