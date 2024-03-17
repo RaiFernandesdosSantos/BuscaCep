@@ -1,8 +1,12 @@
 "use server";
 
-export async function buscar(data: FormData) {
-  const busca = data.get("codigocep");
+import { cookies } from "next/headers";
 
-  const res = (await fetch(`https://viacep.com.br/ws/${busca}/json/`)).body;
-  console.log(res);
+export async function buscar(fData: FormData) {
+  const busca = fData.get("rc");
+
+  const response = await fetch(`https://viacep.com.br/ws/${busca}/json/`);
+  const data = await response.json();
+
+  cookies().set("cep", JSON.stringify(data));
 }
