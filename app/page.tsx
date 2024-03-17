@@ -1,31 +1,13 @@
 import Header from "@/public/components/header";
 import "@/public/style/style.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
-import { Buscar } from "./middleware/action";
+import Formulario from "@/public/components/formulario";
 
 export default function Home() {
   return (
     <div className="container">
       <Header />
       <main className="main">
-        <form action={Buscar}>
-          <h1>Buscar CEP</h1>
-          <label htmlFor="rc">Digite o CEP que deseja pesquisar:</label>
-          <input
-            type="text"
-            id="rc"
-            name="rc"
-            placeholder="Digite somente os numeros"
-          />
-          <button type="submit" className="pesquisar">
-            Buscar
-            <FontAwesomeIcon
-              icon={faMagnifyingGlassLocation}
-              className="iconepesquisar"
-            />
-          </button>
-        </form>
+        <Formulario />
       </main>
     </div>
   );
