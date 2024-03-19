@@ -3,13 +3,27 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export async function Buscar(fData: FormData) {
-  const busca = fData.get("codigocep");
+export async function buscar(fData: FormData) {
+  cookies().delete("cep");
 
-  const response = await fetch(`https://viacep.com.br/ws/${busca}/json/`);
-  const data = await response.json();
+  if(!fData.get("codigocep")) {
+    const rua = fData.get("rua");
+    const cidade = fData.get("cidade");
+    const estado = fData.get("estado");
 
-  cookies().set("cep", JSON.stringify(data));
+    const response = await fetch(`https://viacep.com.br/ws/${estado}/${cidade}/${rua}/json/`);
+    const data = await response.json();
 
+    cookies().set("cep", JSON.stringify(data));
+  }
+  else{
+    const busca = fData.get("codigocep");
+
+    const response = await fetch(`https://viacep.com.br/ws/${busca}/json/`);
+    const data = await response.json();
+
+    cookies().set("cep", JSON.stringify(data));
+  }
+  
   redirect("/resultado");
 }

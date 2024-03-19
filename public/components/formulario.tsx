@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { Buscar } from "@/app/middleware/action";
+import { buscar } from "@/app/middleware/action";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,7 +13,7 @@ export default function Formulario() {
   };
 
   return (
-    <form className="form" action={Buscar}>
+    <form className="form" action={buscar}>
       <div className="rowwrap">
       <label htmlFor="pesquisa">Pesquisar utilizando:</label>
       <select id="pesquisa" value={opcao} onChange={mudarOpcao}>
