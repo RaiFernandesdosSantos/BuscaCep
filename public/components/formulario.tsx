@@ -41,10 +41,6 @@ export default function Formulario() {
           <input type="text" id="rua" name="rua" />
           </div>
           <div className="input-box">
-          <label htmlFor="bairro">Bairro ou distrito</label>
-          <input type="text" id="bairro" name="bairro" />
-          </div>
-          <div className="input-box">
           <label htmlFor="cidade">Cidade</label>
           <input type="text" id="cidade" name="cidade" />
           </div>
