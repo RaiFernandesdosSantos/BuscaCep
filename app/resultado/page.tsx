@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
 
       <main className="main">
-        <div className="wrap">
+        <div className="rowwrap">
           <Link href={"/"} className="voltar">
             <FontAwesomeIcon icon={faRotateLeft} className="iconevoltar" />
           </Link>
