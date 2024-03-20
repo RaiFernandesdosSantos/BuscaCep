@@ -33,14 +33,23 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            {ardata && ardata.map((item: any, index: any) => (
-              <tr key={index}>
-                <td>{item.logradouro}</td>
-                <td>{item.bairro}</td>
-                <td>{`${item.localidade}/${item.uf}`}</td>
-                <td>{item.cep}</td>
+            {ardata && (Array.isArray(ardata) ? 
+              ardata.map((item: any, index: any) => (
+                <tr key={index}>
+                  <td>{item.logradouro}</td>
+                  <td>{item.bairro}</td>
+                  <td>{`${item.localidade}/${item.uf}`}</td>
+                  <td>{item.cep}</td>
+                </tr>
+              ))
+              :
+              <tr>
+                <td>{ardata.logradouro}</td>
+                <td>{ardata.bairro}</td>
+                <td>{`${ardata.localidade}/${ardata.uf}`}</td>
+                <td>{ardata.cep}</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
         <Link href={"/"} className="pesquisar">
