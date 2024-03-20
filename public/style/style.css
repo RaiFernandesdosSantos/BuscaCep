@@ -50,11 +50,23 @@ form select {
   form{
     width: 80%;
   }
+  .rowwrap{
+    gap: 2rem;
+  }
 }
 
 @media(min-width: 768px) and (max-width: 992px){
   form{
     width: 50%;
+  }
+  .rowwrap{
+    gap: 3rem;
+  }
+}
+
+@media(min-width: 1355px){
+  .rowwrap{
+    gap: 5rem;
   }
 }
 
@@ -76,7 +88,6 @@ form select {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .voltar {
@@ -95,6 +106,11 @@ form select {
   width: 3rem;
   height: 3rem;
 }
+@media(max-width:842px){
+  table{
+    
+  }
+}
 
 table {
   font-size: 1.7rem;
@@ -103,6 +119,7 @@ table {
   border-collapse: collapse;
   margin: 2rem 0;
 }
+
 
 table thead {
   background-color: #007f00;

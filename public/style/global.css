@@ -26,13 +26,27 @@ body {
   padding: 2rem;
 }
 
-h1 {
-  font-size: 5rem;
+
+
+@media (min-width:576px){
+  h1{
+    font-size: 4rem;
+    color: #007f00;
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+@media(max-width: 575px){
+  h1 {
+  font-size: 3rem;
   color: #007f00;
   margin: 1rem;
   text-align: center;
 }
 
+
+}
 button {
   outline: none;
   border: none;
