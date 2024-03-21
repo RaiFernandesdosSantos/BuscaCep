@@ -38,6 +38,7 @@ form select {
   background-color: #00a300;
 }
 
+/* pra celular */
 @media(max-width: 576px){
   form{
     width: 70%;
@@ -45,7 +46,44 @@ form select {
   .rowwrap{
     flex-direction: column;
   }
+  .tablehead{
+    font-size: 1.1rem;
+  }
+  .tabledata{
+    padding-left: 0.5rem;
+  }
 }
+@media(max-width:767px){
+  .table{
+    display: flex;
+    flex-wrap: wrap;  
+}
+  .trow{  
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.1 solid black;
+  }
+  .tablehead{
+    width: 35%;
+    max-height: 24rem;
+  }
+  .tablebody{
+    width: 65%;
+    overflow-y: scroll;
+    max-height: 24rem;
+  }
+  .tabledata{
+    height: 6rem;
+  }
+}
+/* maiores pra frente */
+@media(min-width: 768px) {
+  .tabledata{
+    border-right: 0.1rem solid black;
+    padding: 1rem;
+  }
+}
+
 @media (min-width: 577px) and (max-width: 767px){
   form{
     width: 80%;
@@ -55,6 +93,14 @@ form select {
   }
 }
 
+/* nesse range, quebra as border por causa do texto precisar de mais altura pra +linhas */
+@media(min-width: 768px) and (max-width: 820px){
+  .tabledata{
+    font-size: 1.6rem;
+  }
+}
+
+/* pra normalizar a table maior */
 @media(min-width: 768px) and (max-width: 992px){
   form{
     width: 50%;
@@ -106,51 +152,36 @@ form select {
   width: 3rem;
   height: 3rem;
 }
-@media(max-width:842px){
-  table{
-    
-  }
-}
 
-table {
+.table{
   font-size: 1.7rem;
-  overflow: scroll;
   width: 75%;
   border-collapse: collapse;
   margin: 2rem 0;
 }
 
-
-table thead {
+.tablehead{
   background-color: #007f00;
   color: white;
-}
-
-table thead th {
   font-weight: 700;
-  text-align: left;
 }
-
-table th:last-child,
-table td:last-child {
-  border-right: none;
+.tablebody{
+  background-color: #f0f8ff;
 }
-
-table td,
-table th {
-  padding: 1rem;
-  text-align: left;
-  border-right: 0.1rem solid black;
-}
-
-table tbody tr {
+.trow{
+  display: flex;
   border-bottom: 0.1rem solid black;
 }
-
-table tbody tr:last-child {
+.trow:last-child {
   border-bottom: none;
 }
-
-table tbody {
-  background-color: #f0f8ff;
+.tabledata{
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.tabledata:last-child{
+  border-right: none;
 }

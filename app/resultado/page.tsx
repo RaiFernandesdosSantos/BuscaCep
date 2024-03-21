@@ -23,35 +23,36 @@ export default function Home() {
           </Link>
           <h1>Resultado da pesquisa</h1>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Logradouro/Nome</th>
-              <th>Bairro/Distrito</th>
-              <th>Localidade/UF</th>
-              <th>CEP</th>
-            </tr>
-          </thead>
-          <tbody>
+        <div className="table">
+          <div className="tablehead">
+            <div className="trow">
+              <div className="tabledata">Logradouro/Nome</div>
+              <div className="tabledata">Bairro/Distrito</div>
+              <div className="tabledata">Localidade/UF</div>
+              <div className="tabledata">CEP</div>
+            </div>
+          </div >
+          <div className="tablebody">
             {ardata && (Array.isArray(ardata) ? 
               ardata.map((item: any, index: any) => (
-                <tr key={index}>
-                  <td>{item.logradouro}</td>
-                  <td>{item.bairro}</td>
-                  <td>{`${item.localidade}/${item.uf}`}</td>
-                  <td>{item.cep}</td>
-                </tr>
+                <div className="trow" key={index}>
+                  <div className="tabledata">{item.logradouro}</div>
+                  <div className="tabledata">{item.bairro}</div>
+                  <div className="tabledata">{`${item.localidade}/${item.uf}`}</div>
+                  <div className="tabledata">{item.cep}</div>
+                </div>
               ))
               :
-              <tr>
-                <td>{ardata.logradouro}</td>
-                <td>{ardata.bairro}</td>
-                <td>{`${ardata.localidade}/${ardata.uf}`}</td>
-                <td>{ardata.cep}</td>
-              </tr>
+              <div className="trow">
+                <div className="tabledata">{ardata.logradouro}</div>
+                <div className="tabledata">{ardata.bairro}</div>
+                <div className="tabledata">{`${ardata.localidade}/${ardata.uf}`}</div>
+                //adicionar item e fazer um toggle pra deixar a descida mais fluida
+                <div className="tabledata">{ardata.cep}</div>
+              </div>
             )}
-          </tbody>
-        </table>
+          </div>
+        </div>
         <Link href={"/"} className="pesquisar">
           Nova Pesquisa
           <FontAwesomeIcon
